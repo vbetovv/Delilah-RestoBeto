@@ -1,0 +1,617 @@
+{
+	"info": {
+		"_postman_id": "a38c503d-0294-4f10-8d92-6fe03972bdbf",
+		"name": "Delilah",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Post Ingreso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2ODQyMTcwLCJleHAiOjE2MDY4NDMzNzB9.biwjrPu1n0q68JLH62xIJyxLDmYpZA-er2oM_-qQOU_GLX-ubqYRrzheQY14hiKIOt3IfWcdmIevUXLcZp8o9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"usuario\": \"Leandrouno\",\r\n\"contrasena\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/ingreso/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"ingreso",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer Usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2ODIwNDQ4LCJleHAiOjE2MDY4MjE2NDh9.Swg4sncyoSeYDMApzDnRhydv4CmNmboNzISqXCYEzRltJPrSSXbdxE_rMRqHocTLSR_pk-GJcpJuGYasvXTrtQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"usuario\": \"Leandrouno\",\r\n        \"nombre\": \"Leandro\",\r\n        \"apellido\": \"Mugnolo\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6MSwibm9tYnJlIjoiTGVhbmRybyIsImFwZWxsaWRvIjoiTXVnbm9sbyIsImlhdCI6MTYwNjY3NzQ4MX0.CwkL_4jLQLmw_saLO4HfnWgzb0UP45l7ijnMeWJ3SpQ",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"usuario\": \"Bart\",\r\n        \"nombre\": \"Bart\",\r\n        \"apellido\": \"Montes\",\r\n        \"email\":\"barto@lito.com\",\r\n        \"contrasena\":\"secret\",\r\n        \"telefono\": 1233652,\r\n        \"domicilio\": \"la granja 236\"\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/usuarios/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2ODE4ODk4LCJleHAiOjE2MDY4MjAwOTh9.gKa9A7gcJN7yxTsDFzVhgr-Rj0ZpKPBtvCXxgdR87BsShyDorwkub6Y3UFcTW8Lyau-ndELYx97SO3bIiIwwYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"usuario\": \"Bartolito\",\r\n        \"nombre\": \"Bartolo Meoh\",\r\n        \"apellido\": \"Paredes\",\r\n        \"email\":\"barto@lito.com\",\r\n        \"contrasena\":\"secret\",\r\n        \"telefono\": 1233652,\r\n        \"domicilio\": \"la granja 236\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/usuarios/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Usuarios",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2MzU4NjQyfQ.oYj--VZ1W9bIuul_4Wu5IoMQVvKd5vtXFSsFCuq9j5g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"usuario\": \"Bartolito\",\r\n        \"nombre\": \"Bartolo Meoh\",\r\n        \"apellido\": \"Paredes\",\r\n        \"email\":\"barto@lito.com\",\r\n        \"contrasena\":\"secret\",\r\n        \"telefono\": 1233652,\r\n        \"domicilio\": \"la granja 236\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Get Productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2ODIxMTU4LCJleHAiOjE2MDY4MjIzNTh9.O6jkQ1BUV5VBtilM7V2OCXaFy0H2uTPx6vBGsspUNlv3lNcy6zNQkglkFxpt1lBnwD3FKjnhm-vDx2IDoQHzug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/productos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Productos por nombre",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"nombre\": \"empa\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/productos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Productos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6MSwibm9tYnJlIjoiTGVhbmRybyIsImFwZWxsaWRvIjoiTXVnbm9sbyIsImlhdCI6MTYwNjc0OTg0OX0.DLIAEFNWIYm-ulJiMHnUmHY-_5oauCx6grypYD1I2ro",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Empanada de Lechuga\",\r\n        \"precio\": 64,\r\n        \"imagen\": \"empanada_verdura.png\",\r\n        \"descripcion\": \"Riquisima empanada de Verdura acompañanda con Servilleta de papel \"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/productos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2ODIxMTU4LCJleHAiOjE2MDY4MjIzNTh9.O6jkQ1BUV5VBtilM7V2OCXaFy0H2uTPx6vBGsspUNlv3lNcy6zNQkglkFxpt1lBnwD3FKjnhm-vDx2IDoQHzug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2MzU4NjQyfQ.oYj--VZ1W9bIuul_4Wu5IoMQVvKd5vtXFSsFCuq9j5g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\":12,\r\n        \"nombre\": \"Empanada de Verdura\",\r\n        \"precio\": 64,\r\n        \"imagen\": \"empanada_verdura.png\",\r\n        \"descripcion\": \"Riquisima empanada de Verdura acompañanda con Servilleta de carton \"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/productos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Productos",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2MzU4NjQyfQ.oYj--VZ1W9bIuul_4Wu5IoMQVvKd5vtXFSsFCuq9j5g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 11,\r\n        \"nombre\": \"Empanada de Verdura\",\r\n        \"precio\": 64,\r\n        \"imagen\": \"empanada_verdura.png\",\r\n        \"descripcion\": \"Riquisima empanada de Verdura acompañanda con Servilleta de carton \"\r\n          \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/productos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Traer Pedidos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2ODY2MTA2LCJleHAiOjE2MDY5ODYxMDZ9.DIySKEevAQ3T6fjKOrfFJKfXlrAqex9xfuZhGRN0XBKA9nXKlV3UekdLnZZFGjZNaOrMNX25dr8kBxk2W7l6GA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2ODM1MDAzLCJleHAiOjE2MDY4MzYyMDN9.Tl1_izw92dXgWYZ82JuYMi2sXOsNZTOxKTRmGopfXI45kSiwA-EPzjF_tgLGjJtCp0G_jmypWlvfIudb0_J5tQ",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 3\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/pedidos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Pedido",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiTGVhbmRyb3VubyIsImFkbWluIjoxLCJpZCI6MSwiaWF0IjoxNjA2ODQyMTcwLCJleHAiOjE2MDY4NDMzNzB9.biwjrPu1n0q68JLH62xIJyxLDmYpZA-er2oM_-qQOU_GLX-ubqYRrzheQY14hiKIOt3IfWcdmIevUXLcZp8o9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6MSwibm9tYnJlIjoiTGVhbmRybyIsImFwZWxsaWRvIjoiTXVnbm9sbyIsImlhdCI6MTYwNjc1NzIzMX0.Y1a0S4_3EGoETp1-4oI6-Bfk_vYvEwdohgVQ2p7vPyY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_usuario\": 2,\r\n    \"total\": 1200,\r\n    \"productos\" : [\r\n    {\r\n        \"id_producto\": 1,\r\n        \"cantidad\":2,\r\n        \"nombre_producto\": \"Empanada Carne\",\r\n        \"precio\": 60\r\n    },\r\n     {\r\n        \"id_producto\": 6,\r\n        \"cantidad\":3,\r\n        \"nombre_producto\": \"Empanada de Pollo\",\r\n        \"precio\": 61     \r\n     }  \r\n        ]\r\n\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/pedidos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Pedido",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRtaW4iOjEsIm5vbWJyZSI6IkxlYW5kcm8iLCJhcGVsbGlkbyI6Ik11Z25vbG8iLCJpYXQiOjE2MDY3NTk0Mjd9.QlrEp_OWotyNSYZc4IGLlJ_rVOq9cmNjSH1HQ09dFJE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_pedido\": 2,\r\n    \"estado\": \"entregad\"\r\n\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/pedidos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRtaW4iOjEsIm5vbWJyZSI6IkxlYW5kcm8iLCJhcGVsbGlkbyI6Ik11Z25vbG8iLCJpYXQiOjE2MDY3NTk0Mjd9.QlrEp_OWotyNSYZc4IGLlJ_rVOq9cmNjSH1HQ09dFJE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_pedido\": 20\r\n\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/pedidos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
